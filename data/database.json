@@ -1,0 +1,1132 @@
+{
+  "users": [
+    {
+      "id": "user-student-1",
+      "email": "priya.sharma@campus.edu",
+      "name": "Priya Sharma",
+      "role": "student",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "user-student-2",
+      "email": "rahul.verma@campus.edu",
+      "name": "Rahul Verma",
+      "role": "student",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-02T11:00:00Z"
+    },
+    {
+      "id": "user-student-3",
+      "email": "ananya.patel@campus.edu",
+      "name": "Ananya Patel",
+      "role": "student",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-03T09:30:00Z"
+    },
+    {
+      "id": "user-tpo-1",
+      "email": "tpo@campus.edu",
+      "name": "Dr. K. Ramanathan",
+      "role": "tpo",
+      "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-07-01T08:00:00Z"
+    },
+    {
+      "id": "user-recruiter-1",
+      "email": "recruiter@microsoft.com",
+      "name": "Vikram Seth (Microsoft Recruiter)",
+      "role": "recruiter",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-10T14:00:00Z"
+    },
+    {
+      "id": "user-recruiter-2",
+      "email": "talent@google.com",
+      "name": "Sarah Jenkins (Google Campus Lead)",
+      "role": "recruiter",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-12T15:00:00Z"
+    },
+    {
+      "id": "user-admin-1",
+      "email": "admin@campus.edu",
+      "name": "Chief Administrator",
+      "role": "admin",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-06-01T08:00:00Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dept-cse",
+      "code": "CSE",
+      "name": "Computer Science & Engineering"
+    },
+    {
+      "id": "dept-it",
+      "code": "IT",
+      "name": "Information Technology"
+    },
+    {
+      "id": "dept-aids",
+      "code": "AIDS",
+      "name": "Artificial Intelligence & Data Science"
+    },
+    {
+      "id": "dept-ece",
+      "code": "ECE",
+      "name": "Electronics & Communication Engineering"
+    },
+    {
+      "id": "dept-eee",
+      "code": "EEE",
+      "name": "Electrical & Electronics Engineering"
+    },
+    {
+      "id": "dept-mech",
+      "code": "MECH",
+      "name": "Mechanical Engineering"
+    },
+    {
+      "id": "dept-civil",
+      "code": "CIVIL",
+      "name": "Civil Engineering"
+    }
+  ],
+  "students": [
+    {
+      "id": "student-1",
+      "userId": "user-student-1",
+      "regNumber": "2023CS0142",
+      "fullName": "Priya Sharma",
+      "institutionalEmail": "priya.sharma@campus.edu",
+      "phone": "+91 98765 43210",
+      "departmentId": "dept-cse",
+      "departmentCode": "CSE",
+      "departmentName": "Computer Science & Engineering",
+      "semester": 7,
+      "cgpa": 8.85,
+      "activeBacklogs": 0,
+      "graduationYear": 2027,
+      "skills": [
+        "Python",
+        "Java",
+        "Data Structures",
+        "Algorithms",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+        "REST APIs"
+      ],
+      "projects": [
+        "Campus Recruitment Portal with Real-Time ATS",
+        "Distributed Cache System with Raft Consensus",
+        "AI-Powered Code Reviewer"
+      ],
+      "certifications": [
+        "AWS Certified Solutions Architect Associate",
+        "Oracle Certified Java Professional"
+      ],
+      "resumeUrl": "/uploads/Priya_Sharma_Resume_Updated.pdf",
+      "resumeFileName": "Priya_Sharma_Resume_Updated.pdf",
+      "resumeLastUpdated": "2026-11-09T02:57:03.690Z",
+      "isVerified": true,
+      "verifiedBy": "Dr. K. Ramanathan (TPO)",
+      "verifiedAt": "2026-09-01T10:00:00Z",
+      "placementStatus": "Not Placed"
+    },
+    {
+      "id": "student-2",
+      "userId": "user-student-2",
+      "regNumber": "2023EC0089",
+      "fullName": "Rahul Verma",
+      "institutionalEmail": "rahul.verma@campus.edu",
+      "phone": "+91 98765 43211",
+      "departmentId": "dept-ece",
+      "departmentCode": "ECE",
+      "departmentName": "Electronics & Communication Engineering",
+      "semester": 7,
+      "cgpa": 7.2,
+      "activeBacklogs": 1,
+      "graduationYear": 2027,
+      "skills": [
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "Microservices",
+        "MATLAB",
+        "Python"
+      ],
+      "projects": [
+        "Smart Grid Monitoring System",
+        "FPGA Audio Synthesizer"
+      ],
+      "certifications": [
+        "Arm Certified MCU Engineer"
+      ],
+      "resumeUrl": "/resumes/rahul_verma_cv.pdf",
+      "resumeFileName": "Rahul_Verma_Resume.pdf",
+      "resumeLastUpdated": "2026-09-20T10:00:00Z",
+      "isVerified": true,
+      "verifiedBy": "Dr. K. Ramanathan (TPO)",
+      "verifiedAt": "2026-09-02T11:00:00Z",
+      "placementStatus": "Not Placed"
+    },
+    {
+      "id": "student-3",
+      "userId": "user-student-3",
+      "regNumber": "2023IT0015",
+      "fullName": "Ananya Patel",
+      "institutionalEmail": "ananya.patel@campus.edu",
+      "phone": "+91 98765 43212",
+      "departmentId": "dept-it",
+      "departmentCode": "IT",
+      "departmentName": "Information Technology",
+      "semester": 7,
+      "cgpa": 9.42,
+      "activeBacklogs": 0,
+      "graduationYear": 2027,
+      "skills": [
+        "Python",
+        "Go",
+        "Kubernetes",
+        "Cloud Systems",
+        "Machine Learning",
+        "Data Structures",
+        "Algorithms"
+      ],
+      "projects": [
+        "High-throughput message broker",
+        "Federated Learning Framework"
+      ],
+      "certifications": [
+        "Google Cloud Professional Data Engineer"
+      ],
+      "resumeUrl": "/resumes/ananya_patel_cv.pdf",
+      "resumeFileName": "Ananya_Patel_Resume.pdf",
+      "resumeLastUpdated": "2026-08-30T10:00:00Z",
+      "isVerified": true,
+      "verifiedBy": "Dr. K. Ramanathan (TPO)",
+      "verifiedAt": "2026-09-01T09:00:00Z",
+      "placementStatus": "Placed"
+    },
+    {
+      "id": "student-4",
+      "userId": "user-student-4",
+      "regNumber": "2023ME0054",
+      "fullName": "Karthik Raja",
+      "institutionalEmail": "karthik.raja@campus.edu",
+      "phone": "+91 98765 43213",
+      "departmentId": "dept-mech",
+      "departmentCode": "MECH",
+      "departmentName": "Mechanical Engineering",
+      "semester": 7,
+      "cgpa": 8.1,
+      "activeBacklogs": 0,
+      "graduationYear": 2027,
+      "skills": [
+        "SolidWorks",
+        "AutoCAD",
+        "MATLAB",
+        "Python",
+        "Thermal Analysis"
+      ],
+      "projects": [
+        "Hybrid Vehicle Powertrain Simulation",
+        "Robotic Arm Manipulator"
+      ],
+      "certifications": [
+        "Certified SolidWorks Associate (CSWA)"
+      ],
+      "resumeUrl": "/resumes/karthik_raja_cv.pdf",
+      "resumeFileName": "Karthik_Raja_Resume.pdf",
+      "resumeLastUpdated": "2026-09-15T15:00:00Z",
+      "isVerified": true,
+      "verifiedBy": "Dr. K. Ramanathan (TPO)",
+      "verifiedAt": "2026-09-03T14:00:00Z",
+      "placementStatus": "Not Placed"
+    },
+    {
+      "id": "student-5",
+      "userId": "user-student-5",
+      "regNumber": "2023AI0021",
+      "fullName": "Sneha Roy",
+      "institutionalEmail": "sneha.roy@campus.edu",
+      "phone": "+91 98765 43214",
+      "departmentId": "dept-aids",
+      "departmentCode": "AIDS",
+      "departmentName": "Artificial Intelligence & Data Science",
+      "semester": 7,
+      "cgpa": 8.65,
+      "activeBacklogs": 0,
+      "graduationYear": 2027,
+      "skills": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "NLP",
+        "Computer Vision",
+        "SQL"
+      ],
+      "projects": [
+        "Multilingual Medical NER",
+        "Edge Detection CNN"
+      ],
+      "certifications": [
+        "DeepLearning.AI TensorFlow Developer"
+      ],
+      "resumeUrl": "/resumes/sneha_roy_cv.pdf",
+      "resumeFileName": "Sneha_Roy_Resume.pdf",
+      "resumeLastUpdated": "2026-10-02T11:00:00Z",
+      "isVerified": false,
+      "placementStatus": "Not Placed"
+    }
+  ],
+  "companies": [
+    {
+      "id": "comp-1",
+      "recruiterUserId": "user-recruiter-2",
+      "name": "Google",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "industry": "Technology / Cloud / AI",
+      "website": "https://careers.google.com",
+      "description": "Global tech leader organizing world information and making it universally accessible.",
+      "hrName": "Sarah Jenkins",
+      "hrEmail": "talent@google.com",
+      "hrPhone": "+1 (650) 253-0000",
+      "approvalStatus": "Approved",
+      "registeredAt": "2026-08-12T10:00:00Z"
+    },
+    {
+      "id": "comp-2",
+      "recruiterUserId": "user-recruiter-1",
+      "name": "Microsoft",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+      "industry": "Enterprise Software & Cloud",
+      "website": "https://careers.microsoft.com",
+      "description": "Empowering every person and organization on the planet to achieve more.",
+      "hrName": "Vikram Seth",
+      "hrEmail": "recruiter@microsoft.com",
+      "hrPhone": "+91 80 6787 0000",
+      "approvalStatus": "Approved",
+      "registeredAt": "2026-08-10T10:00:00Z"
+    },
+    {
+      "id": "comp-3",
+      "recruiterUserId": "user-recruiter-3",
+      "name": "Amazon",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "industry": "E-Commerce & Cloud Computing (AWS)",
+      "website": "https://amazon.jobs",
+      "description": "Earth's most customer-centric company and premier cloud infrastructure provider.",
+      "hrName": "David Miller",
+      "hrEmail": "campus-hiring@amazon.com",
+      "hrPhone": "+1 (206) 266-1000",
+      "approvalStatus": "Approved",
+      "registeredAt": "2026-08-14T09:00:00Z"
+    },
+    {
+      "id": "comp-4",
+      "recruiterUserId": "user-recruiter-4",
+      "name": "Deloitte",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+      "industry": "Consulting & Financial Advisory",
+      "website": "https://www2.deloitte.com/careers",
+      "description": "Leading global provider of audit, assurance, consulting, and advisory services.",
+      "hrName": "Pooja Kapoor",
+      "hrEmail": "pkapoor@deloitte.com",
+      "hrPhone": "+91 22 6185 4000",
+      "approvalStatus": "Approved",
+      "registeredAt": "2026-08-15T11:00:00Z"
+    },
+    {
+      "id": "comp-5",
+      "recruiterUserId": "user-recruiter-5",
+      "name": "Ather Energy",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ather_Energy_Logo.svg/1200px-Ather_Energy_Logo.svg.png",
+      "industry": "Electric Vehicles & Clean Tech",
+      "website": "https://www.atherenergy.com/careers",
+      "description": "Pioneering intelligent electric vehicle design, hardware, and connected battery architectures.",
+      "hrName": "Arjun Nambiar",
+      "hrEmail": "talent@atherenergy.com",
+      "hrPhone": "+91 80 4646 2200",
+      "approvalStatus": "Approved",
+      "registeredAt": "2026-08-18T10:00:00Z"
+    },
+    {
+      "id": "comp-6",
+      "recruiterUserId": "user-recruiter-6",
+      "name": "FinTech Pulse AI",
+      "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+      "industry": "FinTech / High-Frequency Trading",
+      "website": "https://pulsefintech.example.com",
+      "description": "Next-generation quantitative trading and risk optimization engine.",
+      "hrName": "Rohan Mehra",
+      "hrEmail": "rohan@pulsefintech.example.com",
+      "hrPhone": "+91 98200 12345",
+      "approvalStatus": "Pending",
+      "registeredAt": "2026-11-01T14:30:00Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1",
+      "companyId": "comp-1",
+      "companyName": "Google",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "title": "Software Development Engineer I (SDE-1)",
+      "description": "Join the Google Core Infrastructure and Search teams. You will design, develop, test, deploy, maintain, and enhance large-scale distributed software solutions.",
+      "location": "Bangalore / Hyderabad",
+      "employmentType": "Full-time",
+      "packageLPA": 28.5,
+      "minCGPA": 8,
+      "maxBacklogs": 0,
+      "eligibleDepartmentCodes": [
+        "CSE",
+        "IT",
+        "AIDS"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "Data Structures",
+        "Algorithms",
+        "Java",
+        "Python",
+        "System Design"
+      ],
+      "deadline": "2026-12-15T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Resume Shortlisted",
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id": "job-2",
+      "companyId": "comp-2",
+      "companyName": "Microsoft",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+      "title": "Cloud & Systems Engineer",
+      "description": "Work on Microsoft Azure core distributed cloud platform, building resilient virtualization, networking, and high-performance storage stacks.",
+      "location": "Hyderabad / Noida",
+      "employmentType": "Full-time",
+      "packageLPA": 22,
+      "minCGPA": 7.5,
+      "maxBacklogs": 0,
+      "eligibleDepartmentCodes": [
+        "CSE",
+        "IT",
+        "AIDS",
+        "ECE"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "C++",
+        "Python",
+        "Cloud Systems",
+        "Computer Networks",
+        "Operating Systems"
+      ],
+      "deadline": "2026-12-10T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Resume Shortlisted",
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-05T09:00:00Z"
+    },
+    {
+      "id": "job-3",
+      "companyId": "comp-3",
+      "companyName": "Amazon",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "title": "Associate Solutions Architect & SDE",
+      "description": "Collaborate with enterprise AWS customers to design robust, cost-effective architectures and deliver scalable cloud-native integrations.",
+      "location": "Bangalore / Chennai",
+      "employmentType": "Full-time",
+      "packageLPA": 19.5,
+      "minCGPA": 7,
+      "maxBacklogs": 1,
+      "eligibleDepartmentCodes": [
+        "CSE",
+        "IT",
+        "AIDS",
+        "ECE",
+        "EEE"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "Python",
+        "SQL",
+        "Computer Networks",
+        "Linux",
+        "AWS"
+      ],
+      "deadline": "2026-11-30T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Resume Shortlisted",
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-10T11:00:00Z"
+    },
+    {
+      "id": "job-4",
+      "companyId": "comp-4",
+      "companyName": "Deloitte",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+      "title": "Technology & Cyber Risk Analyst",
+      "description": "Provide advisory on enterprise risk management, application security review, IT transformation, and digital compliance strategy.",
+      "location": "Mumbai / Gurgaon / Bangalore",
+      "employmentType": "Full-time",
+      "packageLPA": 9.5,
+      "minCGPA": 6.5,
+      "maxBacklogs": 1,
+      "eligibleDepartmentCodes": [
+        "CSE",
+        "IT",
+        "AIDS",
+        "ECE",
+        "EEE",
+        "MECH",
+        "CIVIL"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "Problem Solving",
+        "Data Analysis",
+        "SQL",
+        "Communication",
+        "Excel"
+      ],
+      "deadline": "2026-12-20T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-15T10:00:00Z"
+    },
+    {
+      "id": "job-5",
+      "companyId": "comp-5",
+      "companyName": "Ather Energy",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ather_Energy_Logo.svg/1200px-Ather_Energy_Logo.svg.png",
+      "title": "Embedded Firmware & Hardware Engineer",
+      "description": "Design next-gen battery management systems (BMS), motor controllers, and automotive IoT telemetry units for connected electric scooters.",
+      "location": "Bangalore (Whitefield)",
+      "employmentType": "Full-time",
+      "packageLPA": 12,
+      "minCGPA": 7,
+      "maxBacklogs": 0,
+      "eligibleDepartmentCodes": [
+        "ECE",
+        "EEE",
+        "MECH"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "C",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "MATLAB",
+        "AutoCAD"
+      ],
+      "deadline": "2026-12-05T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Technical Assessment",
+        "Technical Interview",
+        "HR Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-18T14:00:00Z"
+    },
+    {
+      "id": "job-6",
+      "companyId": "comp-1",
+      "companyName": "Google",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "title": "Summer 2027 Software Engineering Intern",
+      "description": "Intensive 2-month summer internship working with Senior Staff Engineers on production products. PPO opportunity based on performance.",
+      "location": "Bangalore",
+      "employmentType": "Intern + PPO",
+      "packageLPA": 15,
+      "stipendPerMonth": 110000,
+      "minCGPA": 8.5,
+      "maxBacklogs": 0,
+      "eligibleDepartmentCodes": [
+        "CSE",
+        "IT",
+        "AIDS"
+      ],
+      "targetGraduationYear": 2027,
+      "requiredSkills": [
+        "Data Structures",
+        "Algorithms",
+        "C++",
+        "Java"
+      ],
+      "deadline": "2026-11-25T23:59:59Z",
+      "status": "Open",
+      "stages": [
+        "Applied",
+        "Online Assessment",
+        "Technical Interview",
+        "Selected"
+      ],
+      "postedAt": "2026-10-20T10:00:00Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-1794192971899",
+      "studentId": "student-1",
+      "jobId": "job-6",
+      "studentName": "Priya Sharma",
+      "studentRegNo": "2023CS0142",
+      "studentEmail": "priya.sharma@campus.edu",
+      "studentDepartment": "CSE",
+      "studentCGPA": 8.85,
+      "jobTitle": "Summer 2027 Software Engineering Intern",
+      "companyName": "Google",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "packageLPA": 15,
+      "submittedAt": "2026-11-09T02:56:11.899Z",
+      "status": "Applied",
+      "resumeSnapshot": "Priya_Sharma_Resume_2026.pdf",
+      "stages": [
+        {
+          "id": "stage-1794192971899-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-11-09T02:56:11.899Z",
+          "updatedBy": "Priya Sharma",
+          "remarks": "Application submitted successfully before deadline."
+        }
+      ]
+    },
+    {
+      "id": "app-1794192955644",
+      "studentId": "student-1",
+      "jobId": "job-3",
+      "studentName": "Priya Sharma",
+      "studentRegNo": "2023CS0142",
+      "studentEmail": "priya.sharma@campus.edu",
+      "studentDepartment": "CSE",
+      "studentCGPA": 8.85,
+      "jobTitle": "Associate Solutions Architect & SDE",
+      "companyName": "Amazon",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "packageLPA": 19.5,
+      "submittedAt": "2026-11-09T02:55:55.644Z",
+      "status": "Applied",
+      "resumeSnapshot": "Priya_Sharma_Resume_2026.pdf",
+      "stages": [
+        {
+          "id": "stage-1794192955644-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-11-09T02:55:55.644Z",
+          "updatedBy": "Priya Sharma",
+          "remarks": "Application submitted successfully before deadline."
+        }
+      ]
+    },
+    {
+      "id": "app-1",
+      "studentId": "student-1",
+      "jobId": "job-1",
+      "studentName": "Priya Sharma",
+      "studentRegNo": "2023CS0142",
+      "studentEmail": "priya.sharma@campus.edu",
+      "studentDepartment": "CSE",
+      "studentCGPA": 8.85,
+      "jobTitle": "Software Development Engineer I (SDE-1)",
+      "companyName": "Google",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "packageLPA": 28.5,
+      "submittedAt": "2026-10-02T10:30:00Z",
+      "status": "Technical Interview",
+      "resumeSnapshot": "Priya_Sharma_Resume_2026.pdf",
+      "stages": [
+        {
+          "id": "stage-1-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-10-02T10:30:00Z",
+          "updatedBy": "Priya Sharma (Student)"
+        },
+        {
+          "id": "stage-1-2",
+          "stageName": "Resume Shortlisted",
+          "status": "Completed",
+          "updatedAt": "2026-10-08T14:00:00Z",
+          "updatedBy": "Sarah Jenkins (Recruiter)",
+          "remarks": "Excellent DSA and project background."
+        },
+        {
+          "id": "stage-1-3",
+          "stageName": "Online Assessment",
+          "status": "Completed",
+          "scheduledAt": "2026-10-15T18:00:00Z",
+          "remarks": "Score: 100/100 on algorithmic test cases.",
+          "updatedAt": "2026-10-16T09:00:00Z",
+          "updatedBy": "Google Campus Portal"
+        },
+        {
+          "id": "stage-1-4",
+          "stageName": "Technical Interview",
+          "status": "Pending",
+          "scheduledAt": "2026-11-12T11:00:00Z",
+          "venueOrLink": "https://meet.google.com/xyz-placement-2026",
+          "remarks": "Round 1: Data Structures, Graphs & Concurrency.",
+          "updatedAt": "2026-11-05T16:30:00Z",
+          "updatedBy": "Sarah Jenkins (Recruiter)"
+        },
+        {
+          "id": "stage-1-5",
+          "stageName": "HR Interview",
+          "status": "Pending",
+          "updatedAt": "2026-11-05T16:30:00Z",
+          "updatedBy": "Sarah Jenkins (Recruiter)"
+        },
+        {
+          "id": "stage-1-6",
+          "stageName": "Selected",
+          "status": "Pending",
+          "updatedAt": "2026-11-05T16:30:00Z",
+          "updatedBy": "System"
+        }
+      ]
+    },
+    {
+      "id": "app-2",
+      "studentId": "student-1",
+      "jobId": "job-2",
+      "studentName": "Priya Sharma",
+      "studentRegNo": "2023CS0142",
+      "studentEmail": "priya.sharma@campus.edu",
+      "studentDepartment": "CSE",
+      "studentCGPA": 8.85,
+      "jobTitle": "Cloud & Systems Engineer",
+      "companyName": "Microsoft",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+      "packageLPA": 22,
+      "submittedAt": "2026-10-06T15:20:00Z",
+      "status": "Technical Interview",
+      "resumeSnapshot": "Priya_Sharma_Resume_2026.pdf",
+      "stages": [
+        {
+          "id": "stage-2-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-10-06T15:20:00Z",
+          "updatedBy": "Priya Sharma (Student)"
+        },
+        {
+          "id": "stage-2-2",
+          "stageName": "Resume Shortlisted",
+          "status": "Completed",
+          "updatedAt": "2026-10-14T11:00:00Z",
+          "updatedBy": "Vikram Seth (Recruiter)"
+        },
+        {
+          "id": "stage-2-3",
+          "stageName": "Online Assessment",
+          "status": "Pending",
+          "scheduledAt": "2026-11-14T15:00:00Z",
+          "venueOrLink": "https://codility.com/c/msft-campus-2026",
+          "remarks": "Duration: 90 mins, 3 questions.",
+          "updatedAt": "2026-11-04T12:00:00Z",
+          "updatedBy": "Vikram Seth (Recruiter)"
+        },
+        {
+          "id": "stage-1794193121155",
+          "stageName": "Technical Interview",
+          "status": "Completed",
+          "remarks": "Advanced from Online Assessment to Technical Interview via ATS Board.",
+          "updatedAt": "2026-11-09T02:58:41.155Z",
+          "updatedBy": "Vikram Seth (Microsoft Recruiter)"
+        },
+        {
+          "id": "stage-1794193123152",
+          "stageName": "Technical Interview",
+          "status": "Completed",
+          "remarks": "Advanced from Online Assessment to Technical Interview via ATS Board.",
+          "updatedAt": "2026-11-09T02:58:43.152Z",
+          "updatedBy": "Vikram Seth (Microsoft Recruiter)"
+        },
+        {
+          "id": "stage-1794193123721",
+          "stageName": "Technical Interview",
+          "status": "Completed",
+          "remarks": "Advanced from Online Assessment to Technical Interview via ATS Board.",
+          "updatedAt": "2026-11-09T02:58:43.721Z",
+          "updatedBy": "Vikram Seth (Microsoft Recruiter)"
+        }
+      ]
+    },
+    {
+      "id": "app-3",
+      "studentId": "student-1",
+      "jobId": "job-4",
+      "studentName": "Priya Sharma",
+      "studentRegNo": "2023CS0142",
+      "studentEmail": "priya.sharma@campus.edu",
+      "studentDepartment": "CSE",
+      "studentCGPA": 8.85,
+      "jobTitle": "Technology & Cyber Risk Analyst",
+      "companyName": "Deloitte",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+      "packageLPA": 9.5,
+      "submittedAt": "2026-10-16T12:10:00Z",
+      "status": "Applied",
+      "resumeSnapshot": "Priya_Sharma_Resume_2026.pdf",
+      "stages": [
+        {
+          "id": "stage-3-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-10-16T12:10:00Z",
+          "updatedBy": "Priya Sharma (Student)"
+        }
+      ]
+    },
+    {
+      "id": "app-4",
+      "studentId": "student-2",
+      "jobId": "job-3",
+      "studentName": "Rahul Verma",
+      "studentRegNo": "2023EC0089",
+      "studentEmail": "rahul.verma@campus.edu",
+      "studentDepartment": "ECE",
+      "studentCGPA": 7.2,
+      "jobTitle": "Associate Solutions Architect & SDE",
+      "companyName": "Amazon",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "packageLPA": 19.5,
+      "submittedAt": "2026-10-12T09:40:00Z",
+      "status": "Resume Shortlisted",
+      "resumeSnapshot": "Rahul_Verma_Resume.pdf",
+      "stages": [
+        {
+          "id": "stage-4-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-10-12T09:40:00Z",
+          "updatedBy": "Rahul Verma (Student)"
+        },
+        {
+          "id": "stage-4-2",
+          "stageName": "Resume Shortlisted",
+          "status": "Completed",
+          "updatedAt": "2026-10-25T16:00:00Z",
+          "updatedBy": "David Miller (Recruiter)"
+        }
+      ]
+    },
+    {
+      "id": "app-5",
+      "studentId": "student-3",
+      "jobId": "job-1",
+      "studentName": "Ananya Patel",
+      "studentRegNo": "2023IT0015",
+      "studentEmail": "ananya.patel@campus.edu",
+      "studentDepartment": "IT",
+      "studentCGPA": 9.42,
+      "jobTitle": "Software Development Engineer I (SDE-1)",
+      "companyName": "Google",
+      "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "packageLPA": 28.5,
+      "submittedAt": "2026-10-02T08:15:00Z",
+      "status": "Selected",
+      "resumeSnapshot": "Ananya_Patel_Resume.pdf",
+      "stages": [
+        {
+          "id": "stage-5-1",
+          "stageName": "Applied",
+          "status": "Completed",
+          "updatedAt": "2026-10-02T08:15:00Z",
+          "updatedBy": "Ananya Patel"
+        },
+        {
+          "id": "stage-5-2",
+          "stageName": "Resume Shortlisted",
+          "status": "Completed",
+          "updatedAt": "2026-10-05T10:00:00Z",
+          "updatedBy": "Sarah Jenkins"
+        },
+        {
+          "id": "stage-5-3",
+          "stageName": "Online Assessment",
+          "status": "Completed",
+          "updatedAt": "2026-10-12T16:00:00Z",
+          "updatedBy": "Google"
+        },
+        {
+          "id": "stage-5-4",
+          "stageName": "Technical Interview",
+          "status": "Completed",
+          "updatedAt": "2026-10-22T14:00:00Z",
+          "updatedBy": "Google Interviewer"
+        },
+        {
+          "id": "stage-5-5",
+          "stageName": "HR Interview",
+          "status": "Completed",
+          "updatedAt": "2026-10-28T11:00:00Z",
+          "updatedBy": "Sarah Jenkins"
+        },
+        {
+          "id": "stage-5-6",
+          "stageName": "Selected",
+          "status": "Completed",
+          "updatedAt": "2026-11-01T15:00:00Z",
+          "updatedBy": "Sarah Jenkins",
+          "remarks": "Official Offer Extended (28.5 LPA)"
+        }
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "id": "plc-1",
+      "studentId": "student-3",
+      "studentName": "Ananya Patel",
+      "regNumber": "2023IT0015",
+      "departmentCode": "IT",
+      "companyId": "comp-1",
+      "companyName": "Google",
+      "jobId": "job-1",
+      "jobTitle": "Software Development Engineer I (SDE-1)",
+      "packageLPA": 28.5,
+      "placementDate": "2026-11-01T15:00:00Z",
+      "academicYear": "2026-2027",
+      "offerLetterUrl": "/offers/Google_Offer_Ananya_Patel.pdf"
+    },
+    {
+      "id": "plc-2",
+      "studentId": "student-hist-1",
+      "studentName": "Devansh Kulkarni",
+      "regNumber": "2023CS0004",
+      "departmentCode": "CSE",
+      "companyId": "comp-2",
+      "companyName": "Microsoft",
+      "jobId": "job-2",
+      "jobTitle": "Cloud Engineer",
+      "packageLPA": 22,
+      "placementDate": "2026-10-20T10:00:00Z",
+      "academicYear": "2026-2027"
+    },
+    {
+      "id": "plc-3",
+      "studentId": "student-hist-2",
+      "studentName": "Ritu Sen",
+      "regNumber": "2023AI0002",
+      "departmentCode": "AIDS",
+      "companyId": "comp-3",
+      "companyName": "Amazon",
+      "jobId": "job-3",
+      "jobTitle": "Solutions Architect",
+      "packageLPA": 19.5,
+      "placementDate": "2026-10-25T11:30:00Z",
+      "academicYear": "2026-2027"
+    },
+    {
+      "id": "plc-4",
+      "studentId": "student-hist-3",
+      "studentName": "Sanjay Krishnan",
+      "regNumber": "2023EC0045",
+      "departmentCode": "ECE",
+      "companyId": "comp-5",
+      "companyName": "Ather Energy",
+      "jobId": "job-5",
+      "jobTitle": "Embedded Firmware Engineer",
+      "packageLPA": 12,
+      "placementDate": "2026-10-30T16:00:00Z",
+      "academicYear": "2026-2027"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1794193123721",
+      "userId": "user-student-1",
+      "title": "Update on Microsoft Application",
+      "message": "Your application status has been updated to \"Technical Interview\". Remarks: Advanced from Online Assessment to Technical Interview via ATS Board.",
+      "category": "interview",
+      "isRead": false,
+      "createdAt": "2026-11-09T02:58:43.721Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-1794193123152",
+      "userId": "user-student-1",
+      "title": "Update on Microsoft Application",
+      "message": "Your application status has been updated to \"Technical Interview\". Remarks: Advanced from Online Assessment to Technical Interview via ATS Board.",
+      "category": "interview",
+      "isRead": false,
+      "createdAt": "2026-11-09T02:58:43.152Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-1794193121155",
+      "userId": "user-student-1",
+      "title": "Update on Microsoft Application",
+      "message": "Your application status has been updated to \"Technical Interview\". Remarks: Advanced from Online Assessment to Technical Interview via ATS Board.",
+      "category": "interview",
+      "isRead": false,
+      "createdAt": "2026-11-09T02:58:41.155Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-1794192971899",
+      "userId": "user-student-1",
+      "title": "Application Submitted: Google",
+      "message": "Your application for Summer 2027 Software Engineering Intern (15 LPA) has been received.",
+      "category": "application",
+      "isRead": false,
+      "createdAt": "2026-11-09T02:56:11.899Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-1794192955644",
+      "userId": "user-student-1",
+      "title": "Application Submitted: Amazon",
+      "message": "Your application for Associate Solutions Architect & SDE (19.5 LPA) has been received.",
+      "category": "application",
+      "isRead": false,
+      "createdAt": "2026-11-09T02:55:55.644Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-1",
+      "userId": "user-student-1",
+      "title": "Google Technical Interview Scheduled!",
+      "message": "Your Technical Interview for Google SDE-1 is confirmed on Nov 12 at 11:00 AM. Click to join Google Meet.",
+      "category": "interview",
+      "isRead": false,
+      "createdAt": "2026-11-05T16:30:00Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-2",
+      "userId": "user-student-1",
+      "title": "Microsoft Online Assessment Invitiation",
+      "message": "Your Codility assessment for Cloud & Systems Engineer is active. Deadline: Nov 14.",
+      "category": "job",
+      "isRead": false,
+      "createdAt": "2026-11-04T12:00:00Z",
+      "link": "/student/applications"
+    },
+    {
+      "id": "notif-3",
+      "userId": "user-student-1",
+      "title": "Profile Academic Verification Complete",
+      "message": "TPO Dr. K. Ramanathan has verified your 8.85 CGPA and enrollment details.",
+      "category": "system",
+      "isRead": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "link": "/student/profile"
+    },
+    {
+      "id": "notif-4",
+      "userId": "user-tpo-1",
+      "title": "New Company Onboarding Request",
+      "message": "FinTech Pulse AI has registered and awaits verification.",
+      "category": "system",
+      "isRead": false,
+      "createdAt": "2026-11-01T14:30:00Z",
+      "link": "/tpo/companies"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1794192971899",
+      "actorUserId": "user-student-1",
+      "actorName": "Priya Sharma",
+      "actorRole": "student",
+      "action": "SUBMITTED_APPLICATION",
+      "entityType": "Application",
+      "entityId": "app-1794192971899",
+      "details": "Student applied for Summer 2027 Software Engineering Intern at Google.",
+      "timestamp": "2026-11-09T02:56:11.899Z"
+    },
+    {
+      "id": "log-1794192955644",
+      "actorUserId": "user-student-1",
+      "actorName": "Priya Sharma",
+      "actorRole": "student",
+      "action": "SUBMITTED_APPLICATION",
+      "entityType": "Application",
+      "entityId": "app-1794192955644",
+      "details": "Student applied for Associate Solutions Architect & SDE at Amazon.",
+      "timestamp": "2026-11-09T02:55:55.644Z"
+    },
+    {
+      "id": "log-1",
+      "actorUserId": "user-tpo-1",
+      "actorName": "Dr. K. Ramanathan",
+      "actorRole": "tpo",
+      "action": "VERIFIED_PROFILE",
+      "entityType": "Student",
+      "entityId": "student-1",
+      "details": "Verified CGPA (8.85) and 0 backlogs for Priya Sharma (2023CS0142).",
+      "timestamp": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": "log-2",
+      "actorUserId": "user-recruiter-1",
+      "actorName": "Vikram Seth",
+      "actorRole": "recruiter",
+      "action": "SCHEDULED_ROUND",
+      "entityType": "Application",
+      "entityId": "app-2",
+      "details": "Scheduled Codility Online Assessment for candidate Priya Sharma.",
+      "timestamp": "2026-11-04T12:00:00Z"
+    },
+    {
+      "id": "log-3",
+      "actorUserId": "user-recruiter-2",
+      "actorName": "Sarah Jenkins",
+      "actorRole": "recruiter",
+      "action": "EXTENDED_OFFER",
+      "entityType": "Application",
+      "entityId": "app-5",
+      "details": "Extended official offer of 28.5 LPA to Ananya Patel (Google SDE-1).",
+      "timestamp": "2026-11-01T15:00:00Z"
+    },
+    {
+      "id": "log-4",
+      "actorUserId": "user-admin-1",
+      "actorName": "Chief Administrator",
+      "actorRole": "admin",
+      "action": "UPDATED_POLICIES",
+      "entityType": "System",
+      "entityId": "settings-1",
+      "details": "Configured campus policy: Max 2 active dream company offers allowed per student.",
+      "timestamp": "2026-08-15T09:00:00Z"
+    }
+  ]
+}

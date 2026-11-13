@@ -11,10 +11,15 @@ export default async function StudentOpportunitiesPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-slate-900">Campus Placement Opportunities</h2>
-        <p className="text-xs text-slate-500 mt-1">
-          Explore upcoming company drives with automated eligibility checking based on your academic records.
+      <div className="space-y-1">
+        <span className="text-xs font-semibold tracking-wider text-accent uppercase">
+          Verified Campus Drives
+        </span>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-ink">
+          Campus Placement Opportunities
+        </h1>
+        <p className="text-xs sm:text-sm text-ink-muted">
+          Explore upcoming company drives with automated institutional eligibility criteria and advisory skill benchmarks.
         </p>
       </div>
 
@@ -26,4 +31,3 @@ export default async function StudentOpportunitiesPage() {
     </div>
   );
 }
-

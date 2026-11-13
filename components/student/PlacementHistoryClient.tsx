@@ -21,8 +21,8 @@ export default function PlacementHistoryClient({
   useEffect(() => {
     if (isPlaced) {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 60,
+        spread: 60,
         origin: { y: 0.6 },
       });
     }
@@ -30,8 +30,8 @@ export default function PlacementHistoryClient({
 
   const triggerCelebration = () => {
     confetti({
-      particleCount: 120,
-      spread: 90,
+      particleCount: 90,
+      spread: 80,
       origin: { y: 0.5 },
     });
   };
@@ -40,43 +40,43 @@ export default function PlacementHistoryClient({
     <div className="space-y-6">
       {/* Placed celebration banner if placed */}
       {isPlaced ? (
-        <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-700 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+        <div className="bg-accent text-white rounded-feature p-8 border border-accent relative overflow-hidden shadow-xs">
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-              <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-control bg-white/15 text-white text-xs font-semibold uppercase tracking-wider mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Officially Placed!</span>
+                <span>Officially Placed</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black">
-                Congratulations, {student.fullName}!
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
+                Congratulations, {student.fullName}
               </h3>
-              <p className="mt-2 text-emerald-100 text-xs sm:text-sm max-w-xl">
+              <p className="mt-2 text-white/80 text-xs sm:text-sm max-w-xl leading-relaxed">
                 You have officially achieved campus placement. Your confirmed offer is logged with the Training & Placement Cell.
               </p>
             </div>
 
             <button
               onClick={triggerCelebration}
-              className="bg-white text-emerald-800 hover:bg-emerald-50 font-bold px-5 py-3 rounded-2xl text-xs shadow-lg transition-transform hover:scale-105 shrink-0 flex items-center space-x-2"
+              className="bg-white text-ink hover:bg-page font-medium px-4 py-2.5 rounded-control text-xs shadow-xs transition-colors shrink-0 flex items-center space-x-2"
             >
-              <Sparkles className="w-4 h-4 text-emerald-600" />
-              <span>Celebrate Again 🎊</span>
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span>Celebrate Again</span>
             </button>
           </div>
         </div>
       ) : (
-        <div className="bg-white rounded-2xl border border-slate-200 p-8 text-center space-y-3">
-          <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mx-auto">
+        <div className="panel-card rounded-card p-8 text-center space-y-3">
+          <div className="w-12 h-12 rounded-control bg-accent-soft text-accent flex items-center justify-center mx-auto">
             <Award className="w-6 h-6" />
           </div>
-          <h3 className="text-base font-bold text-slate-900">Placement In Progress</h3>
-          <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">
+          <h3 className="text-base font-semibold text-ink">Placement In Progress</h3>
+          <p className="text-xs text-ink-muted max-w-md mx-auto leading-relaxed">
             You are actively participating in recruitment drives. Once a company extends an official offer and updates the recruiter console, it will appear here.
           </p>
           <div className="pt-2">
             <Link
               href="/student/opportunities"
-              className="inline-flex items-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold shadow-sm hover:bg-indigo-700"
+              className="btn-primary text-xs py-2 px-4 rounded-control inline-flex items-center space-x-1.5"
             >
               Browse Open Drives
             </Link>
@@ -87,25 +87,25 @@ export default function PlacementHistoryClient({
       {/* Confirmed Offer Records */}
       {myPlacements.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-base font-bold text-slate-900">Confirmed Placement Records</h3>
+          <h3 className="text-base font-semibold text-ink">Confirmed Placement Records</h3>
           {myPlacements.map((plc) => (
             <div
               key={plc.id}
-              className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+              className="panel-card rounded-card p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
-                  <Building2 className="w-7 h-7" />
+                <div className="w-12 h-12 rounded-control bg-page border border-border-subtle text-accent flex items-center justify-center shrink-0">
+                  <Building2 className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="flex items-center space-x-2">
-                    <h4 className="text-lg font-bold text-slate-900">{plc.companyName}</h4>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <h4 className="text-base font-semibold text-ink">{plc.companyName}</h4>
+                    <span className="text-[10px] font-medium px-2 py-0.5 rounded-control bg-state-success-soft text-state-success border border-state-success/30">
                       Offer Accepted
                     </span>
                   </div>
-                  <p className="text-xs font-semibold text-indigo-600 mt-0.5">{plc.jobTitle}</p>
-                  <div className="flex items-center space-x-3 text-xs text-slate-500 mt-1">
+                  <p className="text-xs font-medium text-accent mt-0.5">{plc.jobTitle}</p>
+                  <div className="flex items-center space-x-3 text-xs text-ink-muted mt-1">
                     <span>Academic Year: {plc.academicYear}</span>
                     <span>•</span>
                     <span>Placed on {new Date(plc.placementDate).toLocaleDateString()}</span>
@@ -115,15 +115,15 @@ export default function PlacementHistoryClient({
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full md:w-auto justify-between md:justify-end">
                 <div className="text-left md:text-right">
-                  <span className="text-[11px] text-slate-400 block font-medium">Offered CTC Package</span>
-                  <span className="text-2xl font-black text-slate-900">₹{plc.packageLPA} LPA</span>
+                  <span className="text-[11px] text-ink-tertiary block font-medium">Offered CTC Package</span>
+                  <span className="text-2xl font-bold text-ink tabular-nums">₹{plc.packageLPA} LPA</span>
                 </div>
 
                 <button
                   onClick={() => alert(`Downloading verified Offer Letter for ${plc.companyName}...`)}
-                  className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs shadow-sm transition-colors flex items-center space-x-2"
+                  className="btn-primary text-xs py-2 px-4 rounded-control flex items-center space-x-2"
                 >
-                  <Download className="w-4 h-4 text-emerald-400" />
+                  <Download className="w-3.5 h-3.5" />
                   <span>Download Offer Letter</span>
                 </button>
               </div>
@@ -134,4 +134,3 @@ export default function PlacementHistoryClient({
     </div>
   );
 }
-

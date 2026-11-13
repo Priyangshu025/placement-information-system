@@ -9,16 +9,8 @@ export default async function StudentResumePage() {
   const jobs = db.getJobs().filter((j) => j.status === 'Open');
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-slate-900">Resume & Skill Analyzer</h2>
-        <p className="text-xs text-slate-500 mt-1">
-          Manage your uploaded CV, review automated skill extraction, and benchmark your fit against company vacancies.
-        </p>
-      </div>
-
+    <div className="py-2">
       <ResumeManagerClient student={student} jobs={jobs} />
     </div>
   );
 }
-

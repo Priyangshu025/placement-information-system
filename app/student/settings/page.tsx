@@ -17,33 +17,38 @@ export default function StudentSettingsPage() {
 
   return (
     <div className="space-y-6 max-w-4xl">
-      <div>
-        <h2 className="text-2xl font-bold text-slate-900">Student Portal Settings</h2>
-        <p className="text-xs text-slate-500 mt-1">
+      <div className="space-y-1">
+        <span className="text-xs font-semibold tracking-wider text-accent uppercase">
+          Account Preferences
+        </span>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-ink">
+          Student Portal Settings
+        </h1>
+        <p className="text-xs sm:text-sm text-ink-muted">
           Configure notification preferences, privacy visibility, and account security.
         </p>
       </div>
 
       {saved && (
-        <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center space-x-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-          <span>Settings saved successfully!</span>
+        <div className="p-4 rounded-control bg-state-success-soft border border-state-success/30 text-state-success text-xs flex items-center space-x-2">
+          <CheckCircle2 className="w-4 h-4 text-state-success shrink-0" />
+          <span>Preferences updated successfully.</span>
         </div>
       )}
 
       <form onSubmit={handleSave} className="space-y-6 text-xs">
         {/* Notification preferences */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-          <h3 className="font-bold text-sm text-slate-900 flex items-center">
-            <Bell className="w-4 h-4 text-indigo-600 mr-2" />
+        <div className="panel-card rounded-card p-6 space-y-4">
+          <h3 className="font-semibold text-sm text-ink flex items-center">
+            <Bell className="w-4 h-4 text-accent mr-2" />
             <span>Alert & Notification Preferences</span>
           </h3>
 
-          <div className="space-y-3 pt-2">
-            <label className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100 cursor-pointer">
+          <div className="space-y-3 pt-1">
+            <label className="flex items-center justify-between p-3.5 rounded-control bg-page border border-border-subtle cursor-pointer hover:border-accent/40 transition-colors">
               <div>
-                <span className="font-bold text-slate-800 block">Email Alerts for New Job Postings</span>
-                <span className="text-[11px] text-slate-500">
+                <span className="font-medium text-ink block">Email Alerts for New Job Postings</span>
+                <span className="text-[11px] text-ink-muted mt-0.5 block">
                   Receive instant announcements whenever a company matches your branch eligibility.
                 </span>
               </div>
@@ -51,14 +56,14 @@ export default function StudentSettingsPage() {
                 type="checkbox"
                 checked={emailAlerts}
                 onChange={(e) => setEmailAlerts(e.target.checked)}
-                className="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500"
+                className="w-4 h-4 accent-[#245B4A] rounded border-border-subtle"
               />
             </label>
 
-            <label className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100 cursor-pointer">
+            <label className="flex items-center justify-between p-3.5 rounded-control bg-page border border-border-subtle cursor-pointer hover:border-accent/40 transition-colors">
               <div>
-                <span className="font-bold text-slate-800 block">Interview & Test Reminders</span>
-                <span className="text-[11px] text-slate-500">
+                <span className="font-medium text-ink block">Interview & Assessment Reminders</span>
+                <span className="text-[11px] text-ink-muted mt-0.5 block">
                   Get high-priority alerts 2 hours prior to scheduled assessments or technical interviews.
                 </span>
               </div>
@@ -66,24 +71,24 @@ export default function StudentSettingsPage() {
                 type="checkbox"
                 checked={interviewSMS}
                 onChange={(e) => setInterviewSMS(e.target.checked)}
-                className="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500"
+                className="w-4 h-4 accent-[#245B4A] rounded border-border-subtle"
               />
             </label>
           </div>
         </div>
 
         {/* Profile Visibility */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-          <h3 className="font-bold text-sm text-slate-900 flex items-center">
-            <Shield className="w-4 h-4 text-emerald-600 mr-2" />
+        <div className="panel-card rounded-card p-6 space-y-4">
+          <h3 className="font-semibold text-sm text-ink flex items-center">
+            <Shield className="w-4 h-4 text-accent mr-2" />
             <span>Data Privacy & Recruiter Discovery</span>
           </h3>
 
-          <div className="space-y-3 pt-2">
-            <label className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100 cursor-pointer">
+          <div className="space-y-3 pt-1">
+            <label className="flex items-center justify-between p-3.5 rounded-control bg-page border border-border-subtle cursor-pointer hover:border-accent/40 transition-colors">
               <div>
-                <span className="font-bold text-slate-800 block">Allow Approved Recruiters to View Resume</span>
-                <span className="text-[11px] text-slate-500">
+                <span className="font-medium text-ink block">Allow Approved Recruiters to View Resume</span>
+                <span className="text-[11px] text-ink-muted mt-0.5 block">
                   Permits verified enterprise hiring teams to shortlist you from the institutional pool.
                 </span>
               </div>
@@ -91,47 +96,32 @@ export default function StudentSettingsPage() {
                 type="checkbox"
                 checked={shareProfileWithRecruiters}
                 onChange={(e) => setShareProfileWithRecruiters(e.target.checked)}
-                className="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500"
+                className="w-4 h-4 accent-[#245B4A] rounded border-border-subtle"
               />
             </label>
           </div>
         </div>
 
-        {/* Password Security */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-          <h3 className="font-bold text-sm text-slate-900 flex items-center">
-            <Lock className="w-4 h-4 text-rose-600 mr-2" />
-            <span>Institutional Account Security</span>
+        {/* Security Notice */}
+        <div className="panel-card rounded-card p-6 space-y-4">
+          <h3 className="font-semibold text-sm text-ink flex items-center">
+            <Lock className="w-4 h-4 text-accent mr-2" />
+            <span>Account Security</span>
           </h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div>
-              <label className="block font-semibold text-slate-700 mb-1">New Password</label>
-              <input
-                type="password"
-                placeholder="••••••••••••"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
-            <div>
-              <label className="block font-semibold text-slate-700 mb-1">Confirm New Password</label>
-              <input
-                type="password"
-                placeholder="••••••••••••"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
-          </div>
+          <p className="text-xs text-ink-muted leading-relaxed">
+            Institutional authentication is synchronized with your university single sign-on (SSO). To change your institutional password, please visit the Campus IT Self-Service portal.
+          </p>
         </div>
 
-        <button
-          type="submit"
-          className="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-sm transition-colors"
-        >
-          Save All Settings
-        </button>
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            className="btn-primary text-xs py-2 px-5 rounded-control"
+          >
+            Save Preferences
+          </button>
+        </div>
       </form>
     </div>
   );
 }
-

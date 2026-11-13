@@ -14,27 +14,27 @@ export default async function RecruiterLayout({
   const applications = db.getApplications().filter((a) => a.companyName === company.name);
 
   return (
-    <div className="flex-1 flex flex-col md:flex-row min-h-[calc(100vh-37px)] bg-slate-100">
+    <div className="flex-1 flex flex-col md:flex-row min-h-[calc(100vh-37px)] bg-page">
       <RecruiterSidebar
         companyName={company.name}
         totalApplicants={applications.length}
       />
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-30 shadow-xs">
+        <header className="bg-surface border-b border-border-subtle px-6 py-3.5 flex items-center justify-between sticky top-0 z-30">
           <div className="flex items-center space-x-3">
-            <h1 className="text-lg font-bold text-slate-900">Corporate Recruiter Portal</h1>
-            <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+            <h1 className="text-sm font-semibold text-ink">Corporate Recruiter Portal</h1>
+            <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-control bg-accent-soft text-accent border border-accent/20">
               Verified Hiring Partner
             </span>
           </div>
 
           <div className="flex items-center space-x-4 text-xs">
-            <span className="text-slate-500 hidden sm:inline">
-              Company: <strong>{company.name}</strong> • Representative: <strong>{currentUser?.name || company.hrName}</strong>
+            <span className="text-ink-muted hidden sm:inline">
+              Company: <strong className="text-ink font-semibold">{company.name}</strong> • Lead: <strong className="text-ink font-semibold">{currentUser?.name || company.hrName}</strong>
             </span>
             <Link
               href="/"
-              className="text-amber-600 hover:text-amber-800 font-semibold"
+              className="text-accent hover:text-accent-hover font-medium"
             >
               Public Site →
             </Link>
@@ -48,4 +48,3 @@ export default async function RecruiterLayout({
     </div>
   );
 }
-

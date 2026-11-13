@@ -17,29 +17,29 @@ export default async function TpoLayout({
   const pendingCompanies = companies.filter((c) => c.approvalStatus === 'Pending').length;
 
   return (
-    <div className="flex-1 flex flex-col md:flex-row min-h-[calc(100vh-37px)] bg-slate-100">
+    <div className="flex-1 flex flex-col md:flex-row min-h-[calc(100vh-37px)] bg-page">
       <TpoSidebar
         unverifiedStudentCount={unverifiedStudents}
         pendingCompanyCount={pendingCompanies}
       />
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-30 shadow-xs">
+        <header className="bg-surface border-b border-border-subtle px-6 py-3.5 flex items-center justify-between sticky top-0 z-30">
           <div className="flex items-center space-x-3">
-            <h1 className="text-lg font-bold text-slate-900">
+            <h1 className="text-sm font-semibold text-ink">
               Training & Placement Officer (TPO) Console
             </h1>
-            <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+            <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-control bg-accent-soft text-accent border border-accent/20">
               Official Administration
             </span>
           </div>
 
           <div className="flex items-center space-x-4 text-xs">
-            <span className="text-slate-500 hidden sm:inline">
-              Logged in as: <strong>{currentUser?.name || 'Dr. K. Ramanathan (TPO)'}</strong>
+            <span className="text-ink-muted hidden sm:inline">
+              Officer: <strong className="text-ink font-semibold">{currentUser?.name || 'Dr. K. Ramanathan (TPO)'}</strong>
             </span>
             <Link
               href="/"
-              className="text-purple-600 hover:text-purple-800 font-semibold"
+              className="text-accent hover:text-accent-hover font-medium"
             >
               Public Portal →
             </Link>
@@ -53,4 +53,3 @@ export default async function TpoLayout({
     </div>
   );
 }
-

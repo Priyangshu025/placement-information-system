@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { GraduationCap, Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import { GraduationCap, Menu, X, ArrowUpRight } from 'lucide-react';
 import { UserRole } from '@/lib/types';
 
 interface NavbarProps {
@@ -15,10 +15,10 @@ export default function Navbar({ currentRole = 'student' }: NavbarProps) {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Cell', href: '/about' },
-    { name: 'Companies', href: '/companies' },
-    { name: 'Statistics', href: '/statistics' },
+    { name: 'Overview', href: '/' },
+    { name: 'Placement Cell', href: '/about' },
+    { name: 'Recruiters', href: '/companies' },
+    { name: 'Analytics', href: '/statistics' },
     { name: 'Highlights', href: '/highlights' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -34,44 +34,44 @@ export default function Navbar({ currentRole = 'student' }: NavbarProps) {
 
   const portalLabel =
     currentRole === 'student'
-      ? 'Student Portal'
+      ? 'Student Workspace'
       : currentRole === 'tpo'
-      ? 'TPO Portal'
+      ? 'TPO Console'
       : currentRole === 'recruiter'
-      ? 'Recruiter Portal'
-      : 'Admin Portal';
+      ? 'Recruiter ATS'
+      : 'Admin Console';
 
   return (
-    <nav className="bg-white/90 backdrop-blur-md sticky top-9 z-40 border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-surface/95 backdrop-blur-md sticky top-9 z-40 border-b border-border-subtle">
+      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
+          {/* Logo & Product Name */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
-              <GraduationCap className="w-6 h-6" />
+            <div className="w-9 h-9 rounded-control bg-accent-soft text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+              <GraduationCap className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-lg font-bold text-slate-900 tracking-tight block leading-tight">
-                Campus PIS
-              </span>
-              <span className="text-[11px] text-slate-500 font-medium tracking-wide uppercase">
+              <span className="text-[15px] font-semibold text-ink tracking-tight block leading-tight">
                 Placement Information System
+              </span>
+              <span className="text-[11px] text-ink-tertiary font-normal tracking-normal">
+                Campus recruitment workspace
               </span>
             </div>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
+          {/* Center Navigation Links */}
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-control text-xs font-medium transition-colors ${
                     isActive
-                      ? 'text-indigo-600 bg-indigo-50/80 font-semibold'
-                      : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
+                      ? 'text-accent bg-accent-soft font-semibold'
+                      : 'text-ink-secondary hover:text-ink hover:bg-surface-muted'
                   }`}
                 >
                   {link.name}
@@ -80,30 +80,31 @@ export default function Navbar({ currentRole = 'student' }: NavbarProps) {
             })}
           </div>
 
-          {/* Action Button */}
+          {/* Action Area */}
           <div className="hidden md:flex items-center space-x-3">
             <Link
-              href={portalHref}
-              className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-sm hover:shadow transition-all"
+              href="/login"
+              className="text-xs font-medium text-ink-secondary hover:text-ink px-2.5 py-1.5 transition-colors"
             >
-              <span>{portalLabel}</span>
-              <ArrowRight className="w-4 h-4" />
+              Sign In
             </Link>
             <Link
-              href="/login"
-              className="text-slate-600 hover:text-slate-900 text-sm font-medium px-3 py-2"
+              href={portalHref}
+              className="btn-primary space-x-1.5 text-xs !py-1.5 !px-3.5 !min-h-[38px]"
             >
-              Login / Register
+              <span>{portalLabel}</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu trigger */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-600 hover:bg-slate-100"
+              className="p-2 rounded-control text-ink-secondary hover:bg-surface-muted transition-colors"
+              aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -111,31 +112,31 @@ export default function Navbar({ currentRole = 'student' }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-4 space-y-2 shadow-lg">
+        <div className="md:hidden border-t border-border-subtle bg-surface px-4 pt-2 pb-5 space-y-1.5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600"
+              className="block px-3 py-2 rounded-control text-sm font-medium text-ink-secondary hover:bg-surface-muted hover:text-ink"
             >
               {link.name}
             </Link>
           ))}
-          <div className="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+          <div className="pt-3 border-t border-border-subtle flex flex-col space-y-2">
             <Link
               href={portalHref}
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center bg-indigo-600 text-white py-2.5 rounded-lg font-medium text-sm"
+              className="btn-primary w-full text-center"
             >
-              Enter {portalLabel}
+              Go to {portalLabel}
             </Link>
             <Link
               href="/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center border border-slate-300 text-slate-700 py-2 rounded-lg font-medium text-sm"
+              className="btn-secondary w-full text-center"
             >
-              Login / Switch Account
+              Sign In / Switch Persona
             </Link>
           </div>
         </div>
@@ -143,4 +144,3 @@ export default function Navbar({ currentRole = 'student' }: NavbarProps) {
     </nav>
   );
 }
-

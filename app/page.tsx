@@ -14,11 +14,8 @@ import {
   Users,
   CheckCircle2,
   ArrowRight,
-  Sparkles,
-  ChevronRight,
   Clock,
-  MapPin,
-  FileCheck
+  ArrowUpRight
 } from 'lucide-react';
 
 export default async function HomePage() {
@@ -28,312 +25,329 @@ export default async function HomePage() {
   const stats = db.getStats();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-page text-ink">
       <Navbar currentRole={currentUser?.role} />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-indigo-900 via-slate-900 to-slate-950 text-white pt-16 pb-24 lg:pt-24 lg:pb-32">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+      {/* Hero Section — Calm, Editorial, Apple-Store-Inspired Clarity */}
+      <section className="pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-border-subtle bg-surface">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-reading mx-auto text-center">
+            <span className="inline-block text-[12px] font-semibold text-accent tracking-wider uppercase bg-accent-soft px-3 py-1 rounded-control mb-5">
+              Campus Placement Information System
+            </span>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-6 animate-pulse">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Campus Recruitment Management Engine 2026</span>
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-              Digitizing the Entire{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">
-                Placement Lifecycle
-              </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-ink leading-[1.15]">
+              Turn campus recruitment into structured, verifiable outcomes.
             </h1>
 
-            <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-              A unified, role-based platform connecting students, recruitment officers, and top corporate employers with automated eligibility checking, ATS pipelines, and real-time recruitment analytics.
+            <p className="mt-6 text-base sm:text-lg text-ink-secondary leading-relaxed">
+              A calm, centralized workspace connecting students, training and placement officers, and corporate recruiters with automated eligibility evaluation, transparent ATS pipelines, and reliable institutional reports.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-3">
               <Link
                 href="/student/opportunities"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-500/25 transition-all hover:scale-105"
+                className="btn-primary space-x-2 text-sm px-5 py-2.5"
               >
-                <span>Browse Campus Drives</span>
-                <ArrowRight className="w-5 h-5" />
+                <span>Browse Campus Vacancies</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
                 href="/statistics"
-                className="inline-flex items-center space-x-2 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold px-6 py-3.5 rounded-xl backdrop-blur-sm transition-all"
+                className="btn-secondary space-x-2 text-sm px-5 py-2.5"
               >
-                <span>View Placement Reports</span>
+                <span>Placement Analytics</span>
               </Link>
             </div>
           </div>
 
-          {/* Quick Metrics Bar */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur-md">
-              <div className="text-indigo-400 text-sm font-semibold flex items-center space-x-2">
-                <Award className="w-4 h-4" />
-                <span>Highest Package</span>
+          {/* Key Metrics Strip — Clean, Tabular, High-Contrast */}
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="panel-card p-5 bg-surface">
+              <span className="text-[12px] text-ink-tertiary font-medium block">
+                Highest CTC Package
+              </span>
+              <div className="text-2xl sm:text-3xl font-semibold text-ink mt-1.5 tabular-nums">
+                ₹{stats.highestPackageLPA} LPA
               </div>
-              <div className="text-3xl font-extrabold text-white mt-2">₹{stats.highestPackageLPA} LPA</div>
-              <div className="text-xs text-slate-400 mt-1">Google & Tech Titans</div>
+              <span className="text-[11px] text-ink-secondary mt-1 block">
+                Tier-1 Technology Engineering
+              </span>
             </div>
 
-            <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur-md">
-              <div className="text-blue-400 text-sm font-semibold flex items-center space-x-2">
-                <TrendingUp className="w-4 h-4" />
-                <span>Average Package</span>
+            <div className="panel-card p-5 bg-surface">
+              <span className="text-[12px] text-ink-tertiary font-medium block">
+                Average Compensation
+              </span>
+              <div className="text-2xl sm:text-3xl font-semibold text-ink mt-1.5 tabular-nums">
+                ₹{stats.averagePackageLPA} LPA
               </div>
-              <div className="text-3xl font-extrabold text-white mt-2">₹{stats.averagePackageLPA} LPA</div>
-              <div className="text-xs text-slate-400 mt-1">Across all branches</div>
+              <span className="text-[11px] text-ink-secondary mt-1 block">
+                Across all engineering branches
+              </span>
             </div>
 
-            <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur-md">
-              <div className="text-emerald-400 text-sm font-semibold flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Total Offers</span>
+            <div className="panel-card p-5 bg-surface">
+              <span className="text-[12px] text-ink-tertiary font-medium block">
+                Confirmed Offers
+              </span>
+              <div className="text-2xl sm:text-3xl font-semibold text-accent mt-1.5 tabular-nums">
+                {stats.placedStudents}+
               </div>
-              <div className="text-3xl font-extrabold text-white mt-2">{stats.placedStudents}+</div>
-              <div className="text-xs text-slate-400 mt-1">82.5% placement rate</div>
+              <span className="text-[11px] text-ink-secondary mt-1 block">
+                82.5% cohort placement rate
+              </span>
             </div>
 
-            <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur-md">
-              <div className="text-purple-400 text-sm font-semibold flex items-center space-x-2">
-                <Building2 className="w-4 h-4" />
-                <span>Recruiting Partners</span>
+            <div className="panel-card p-5 bg-surface">
+              <span className="text-[12px] text-ink-tertiary font-medium block">
+                Active Recruiters
+              </span>
+              <div className="text-2xl sm:text-3xl font-semibold text-ink mt-1.5 tabular-nums">
+                {stats.participatingCompanies}+
               </div>
-              <div className="text-3xl font-extrabold text-white mt-2">{stats.participatingCompanies}+</div>
-              <div className="text-xs text-slate-400 mt-1">Tier-1 & Dream companies</div>
+              <span className="text-[11px] text-ink-secondary mt-1 block">
+                Verified enterprise hiring partners
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Role Portal Gateways */}
-      <section className="py-16 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Role-Based Portals
+      {/* Role Workspaces — Editorial Panels */}
+      <section className="py-20 bg-page border-b border-border-subtle">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-reading mb-12">
+            <span className="text-[11px] uppercase font-semibold text-accent tracking-wider block mb-1">
+              Role Workspaces
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-ink tracking-tight">
+              Designed for each recruitment stakeholder.
             </h2>
-            <p className="mt-2 text-slate-600 text-sm sm:text-base">
-              Each stakeholder interacts with dedicated tools customized to their responsibilities.
+            <p className="text-sm text-ink-secondary mt-2">
+              Every persona operates within a dedicated workspace tailored to their responsibilities without clutter.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {/* Student */}
-            <div className="group rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-blue-400 transition-all bg-gradient-to-b from-blue-50/40 to-white flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <GraduationCap className="w-6 h-6" />
+            <div className="panel-card p-6 flex flex-col justify-between hover:border-accent transition-colors bg-surface">
+              <div>
+                <div className="w-10 h-10 rounded-control bg-accent-soft text-accent flex items-center justify-center mb-4">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-semibold text-ink mb-1">Student Workspace</h3>
+                <p className="text-xs text-ink-secondary mb-4 leading-relaxed">
+                  Maintain verified academics, parse resume skills, run automated eligibility checks, and track stage-by-stage applications.
+                </p>
+                <ul className="text-xs text-ink-secondary space-y-1.5 mb-6">
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Automated Eligibility Checks</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Resume Skills Extraction</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Recruitment Stage Tracker</li>
+                </ul>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Student Portal</h3>
-              <p className="text-xs text-slate-600 mb-4 flex-1">
-                Maintain verified academic profiles, upload resumes, check automated eligibility, and track multi-stage job applications.
-              </p>
-              <ul className="text-xs text-slate-500 space-y-1.5 mb-6">
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-blue-500 mr-1.5" /> Automated Eligibility Engine</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-blue-500 mr-1.5" /> Resume Skills Extractor</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-blue-500 mr-1.5" /> Live Stage Progression</li>
-              </ul>
               <Link
                 href="/student/dashboard"
-                className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-lg bg-blue-600 text-white font-medium text-xs hover:bg-blue-700 transition-colors"
+                className="btn-secondary w-full text-xs justify-between"
               >
-                <span>Enter Student Portal</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>Enter Workspace</span>
+                <ArrowRight className="w-3.5 h-3.5 text-ink-secondary" />
               </Link>
             </div>
 
             {/* TPO */}
-            <div className="group rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-purple-400 transition-all bg-gradient-to-b from-purple-50/40 to-white flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Briefcase className="w-6 h-6" />
+            <div className="panel-card p-6 flex flex-col justify-between hover:border-accent transition-colors bg-surface">
+              <div>
+                <div className="w-10 h-10 rounded-control bg-accent-soft text-accent flex items-center justify-center mb-4">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-semibold text-ink mb-1">TPO Officer Console</h3>
+                <p className="text-xs text-ink-secondary mb-4 leading-relaxed">
+                  Verify academic CGPA and backlogs, approve company registrations, coordinate interview schedules, and export official reports.
+                </p>
+                <ul className="text-xs text-ink-secondary space-y-1.5 mb-6">
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Student Profile Verification</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Company Drive Approvals</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Official CSV & Cohort Exports</li>
+                </ul>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">TPO Officer Console</h3>
-              <p className="text-xs text-slate-600 mb-4 flex-1">
-                Verify student CGPA and backlog records, approve company drives, coordinate interview stages, and generate placement records.
-              </p>
-              <ul className="text-xs text-slate-500 space-y-1.5 mb-6">
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-purple-500 mr-1.5" /> Student Profile Verification</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-purple-500 mr-1.5" /> Company & Drive Approvals</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-purple-500 mr-1.5" /> Department Reports & CSV Export</li>
-              </ul>
               <Link
                 href="/tpo/dashboard"
-                className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-lg bg-purple-600 text-white font-medium text-xs hover:bg-purple-700 transition-colors"
+                className="btn-secondary w-full text-xs justify-between"
               >
-                <span>Enter TPO Console</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>Enter Console</span>
+                <ArrowRight className="w-3.5 h-3.5 text-ink-secondary" />
               </Link>
             </div>
 
             {/* Recruiter */}
-            <div className="group rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-amber-400 transition-all bg-gradient-to-b from-amber-50/40 to-white flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Building2 className="w-6 h-6" />
+            <div className="panel-card p-6 flex flex-col justify-between hover:border-accent transition-colors bg-surface">
+              <div>
+                <div className="w-10 h-10 rounded-control bg-accent-soft text-accent flex items-center justify-center mb-4">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-semibold text-ink mb-1">Recruiter ATS</h3>
+                <p className="text-xs text-ink-secondary mb-4 leading-relaxed">
+                  Post position criteria, review eligible candidate resumes, advance candidates on the ATS board, and submit final selections.
+                </p>
+                <ul className="text-xs text-ink-secondary space-y-1.5 mb-6">
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Vacancy & Criteria Setup</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Resume Skills Scoring</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Stage Progression Board</li>
+                </ul>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Recruiter ATS Portal</h3>
-              <p className="text-xs text-slate-600 mb-4 flex-1">
-                Post job requirements, inspect shortlisted applicant resumes, schedule technical rounds, and submit final selections.
-              </p>
-              <ul className="text-xs text-slate-500 space-y-1.5 mb-6">
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-amber-500 mr-1.5" /> Job Creation with Criteria</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-amber-500 mr-1.5" /> Resume Keyword Scoring</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-amber-500 mr-1.5" /> Kanban Stage Tracking</li>
-              </ul>
               <Link
                 href="/recruiter/dashboard"
-                className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-lg bg-amber-600 text-white font-medium text-xs hover:bg-amber-700 transition-colors"
+                className="btn-secondary w-full text-xs justify-between"
               >
-                <span>Enter Recruiter Portal</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>Enter ATS</span>
+                <ArrowRight className="w-3.5 h-3.5 text-ink-secondary" />
               </Link>
             </div>
 
-            {/* Admin */}
-            <div className="group rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-rose-400 transition-all bg-gradient-to-b from-rose-50/40 to-white flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-6 h-6" />
+            {/* Super Admin */}
+            <div className="panel-card p-6 flex flex-col justify-between hover:border-accent transition-colors bg-surface">
+              <div>
+                <div className="w-10 h-10 rounded-control bg-accent-soft text-accent flex items-center justify-center mb-4">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-semibold text-ink mb-1">Super Admin</h3>
+                <p className="text-xs text-ink-secondary mb-4 leading-relaxed">
+                  Manage engineering branch mappings, graduating sessions, user roles, security parameters, and immutable audit logs.
+                </p>
+                <ul className="text-xs text-ink-secondary space-y-1.5 mb-6">
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Role-Based Access Control</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Engineering Department Registry</li>
+                  <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-accent mr-1.5" /> Immutable Security Logs</li>
+                </ul>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Super Admin Console</h3>
-              <p className="text-xs text-slate-600 mb-4 flex-1">
-                Manage academic departments, institutional batches, user role credentials, security parameters, and immutable audit logs.
-              </p>
-              <ul className="text-xs text-slate-500 space-y-1.5 mb-6">
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-rose-500 mr-1.5" /> User & Role Management</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-rose-500 mr-1.5" /> Department Structure</li>
-                <li className="flex items-center"><CheckCircle2 className="w-3.5 h-3.5 text-rose-500 mr-1.5" /> Full Audit Activity Log</li>
-              </ul>
               <Link
                 href="/admin/dashboard"
-                className="mt-auto inline-flex items-center justify-between w-full py-2.5 px-4 rounded-lg bg-rose-600 text-white font-medium text-xs hover:bg-rose-700 transition-colors"
+                className="btn-secondary w-full text-xs justify-between"
               >
-                <span>Enter Admin Console</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>Enter Admin</span>
+                <ArrowRight className="w-3.5 h-3.5 text-ink-secondary" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Campus Recruitment Workflow Sequence (Section 2 from PDF) */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold text-indigo-600 tracking-wider uppercase">
-              Section 2: Research & Workflow
+      {/* Recruitment Workflow Sequence */}
+      <section className="py-20 bg-surface border-b border-border-subtle">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-reading mb-12">
+            <span className="text-[11px] uppercase font-semibold text-accent tracking-wider block mb-1">
+              End-to-End Workflow
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-              How the Campus Recruitment Workflow Operates
+            <h2 className="text-2xl sm:text-3xl font-semibold text-ink tracking-tight">
+              How campus recruitment operates.
             </h2>
-            <p className="mt-2 text-slate-600 text-sm">
-              The standardized end-to-end recruitment pipeline designed to prevent manual errors and ensure complete transparency.
+            <p className="text-sm text-ink-secondary mt-2">
+              Every stage has explicit state checks, ensuring complete transparency and eliminating bias.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {[
-              { step: '01', title: 'Student Reg & Profile', desc: 'Academics, CGPA, backlogs & resume' },
-              { step: '02', title: 'TPO Verification', desc: 'Authority verifies student records' },
-              { step: '03', title: 'Job Criteria Setup', desc: 'Package, cut-offs & departments' },
-              { step: '04', title: 'Auto Eligibility', desc: 'Instant server validation check' },
-              { step: '05', title: 'ATS Interviews', desc: 'Assessments & multi-stage rounds' },
-              { step: '06', title: 'Final Placement', desc: 'Offer letters & institutional stats' },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm relative flex flex-col">
-                <span className="text-xs font-black text-indigo-500 mb-2">{item.step}</span>
-                <h4 className="text-sm font-bold text-slate-800 mb-1">{item.title}</h4>
-                <p className="text-xs text-slate-500">{item.desc}</p>
+              { step: '01', title: 'Registration & Profile', desc: 'Academics, CGPA, backlogs, and resume' },
+              { step: '02', title: 'TPO Verification', desc: 'Placement staff audits credentials' },
+              { step: '03', title: 'Job Criteria Setup', desc: 'Package, cut-offs, and branches' },
+              { step: '04', title: 'Automated Eligibility', desc: 'Instant server-side rule evaluation' },
+              { step: '05', title: 'ATS Interviews', desc: 'Assessments, technical, and HR rounds' },
+              { step: '06', title: 'Final Selection', desc: 'Offer letters and placement registry' },
+            ].map((item) => (
+              <div key={item.step} className="panel-card p-4 bg-page">
+                <span className="text-xs font-semibold text-accent block mb-2">{item.step}</span>
+                <h4 className="text-xs font-semibold text-ink mb-1">{item.title}</h4>
+                <p className="text-[11px] text-ink-secondary leading-snug">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Live Job Vacancies */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
+      {/* Active Campus Drives */}
+      <section className="py-20 bg-page">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-3">
             <div>
-              <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">
+              <span className="text-[11px] uppercase font-semibold text-accent tracking-wider block mb-1">
                 Live Opportunities
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-                Active Campus Recruitment Drives
+              <h2 className="text-2xl sm:text-3xl font-semibold text-ink tracking-tight">
+                Current Campus Drives
               </h2>
             </div>
             <Link
               href="/student/opportunities"
-              className="inline-flex items-center text-xs font-semibold text-indigo-600 hover:text-indigo-800"
+              className="text-xs font-medium text-accent hover:text-accent-hover flex items-center"
             >
-              <span>View All Vacancies</span>
-              <ArrowRight className="w-4 h-4 ml-1" />
+              <span>View all openings</span>
+              <ArrowRight className="w-3.5 h-3.5 ml-1" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {jobs.slice(0, 6).map((job) => (
               <div
                 key={job.id}
-                className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition-all flex flex-col justify-between"
+                className="panel-card p-6 flex flex-col justify-between hover:border-accent transition-colors bg-surface"
               >
                 <div>
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div>
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-1.5">
+                      <span className="inline-block px-2 py-0.5 rounded-control text-[10px] font-medium bg-accent-soft text-accent mb-2">
                         {job.employmentType}
                       </span>
-                      <h3 className="font-bold text-base text-slate-900 leading-snug">
+                      <h3 className="font-semibold text-sm text-ink leading-snug">
                         {job.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600">{job.companyName}</p>
+                      <p className="text-xs text-ink-secondary">{job.companyName}</p>
                     </div>
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 p-1 flex items-center justify-center overflow-hidden shrink-0">
+                    <div className="w-10 h-10 rounded-control bg-page border border-border-subtle p-1 flex items-center justify-center shrink-0">
                       <img src={job.companyLogo} alt={job.companyName} className="max-h-full max-w-full object-contain" />
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-500 line-clamp-2 mb-4">
+                  <p className="text-xs text-ink-secondary line-clamp-2 mb-4 leading-relaxed">
                     {job.description}
                   </p>
 
-                  <div className="space-y-2 mb-4 bg-slate-50 p-3 rounded-xl text-xs">
+                  <div className="bg-surface-muted p-3 rounded-control text-xs space-y-1.5 mb-4 border border-border-subtle">
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Package CTC:</span>
-                      <span className="font-bold text-slate-900">₹{job.packageLPA} LPA</span>
+                      <span className="text-ink-tertiary">Offered Package:</span>
+                      <span className="font-semibold text-ink">₹{job.packageLPA} LPA</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Min CGPA:</span>
-                      <span className="font-medium text-slate-700">{job.minCGPA.toFixed(1)}</span>
+                      <span className="text-ink-tertiary">Min CGPA:</span>
+                      <span className="text-ink-secondary">{job.minCGPA.toFixed(1)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Allowed Backlogs:</span>
-                      <span className="font-medium text-slate-700">{job.maxBacklogs}</span>
+                      <span className="text-ink-tertiary">Allowed Backlogs:</span>
+                      <span className="text-ink-secondary">{job.maxBacklogs}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">Eligible Branches:</span>
-                      <span className="font-medium text-indigo-600 truncate max-w-[150px]">
+                      <span className="text-ink-tertiary">Eligible Branches:</span>
+                      <span className="text-accent font-medium truncate max-w-[140px]">
                         {job.eligibleDepartmentCodes.join(', ')}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="text-slate-400 flex items-center">
+                <div className="pt-3 border-t border-border-subtle flex items-center justify-between text-xs">
+                  <span className="text-ink-tertiary flex items-center text-[11px]">
                     <Clock className="w-3.5 h-3.5 mr-1" />
                     Due {new Date(job.deadline).toLocaleDateString()}
                   </span>
                   <Link
                     href={`/student/opportunities#${job.id}`}
-                    className="font-semibold text-indigo-600 hover:text-indigo-800 flex items-center"
+                    className="font-medium text-accent hover:text-accent-hover flex items-center text-xs"
                   >
                     <span>Check Eligibility</span>
-                    <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 ml-0.5" />
                   </Link>
                 </div>
               </div>
@@ -342,19 +356,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Recruiter Logos Banner */}
-      <section className="py-12 bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-6">
-            Trusted by 75+ Leading Corporate Hiring Partners
+      {/* Recruiting Partners Bar */}
+      <section className="py-12 bg-surface border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[11px] uppercase tracking-wider text-ink-tertiary font-medium mb-6">
+            Institutional Recruiting Partners
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-90">
             {companies.map((c) => (
-              <div key={c.id} className="flex items-center space-x-2 grayscale hover:grayscale-0 transition-all">
-                <div className="w-8 h-8 rounded bg-white p-1 flex items-center justify-center">
+              <div key={c.id} className="flex items-center space-x-2 text-ink-secondary hover:text-ink transition-colors">
+                <div className="w-6 h-6 rounded bg-white p-0.5 flex items-center justify-center border border-border-subtle">
                   <img src={c.logo} alt={c.name} className="max-h-full max-w-full object-contain" />
                 </div>
-                <span className="text-sm font-semibold text-slate-300">{c.name}</span>
+                <span className="text-xs font-medium">{c.name}</span>
               </div>
             ))}
           </div>
@@ -365,4 +379,3 @@ export default async function HomePage() {
     </div>
   );
 }
-

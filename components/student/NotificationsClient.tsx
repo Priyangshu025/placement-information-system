@@ -24,28 +24,28 @@ export default function NotificationsClient({
   return (
     <div className="space-y-4">
       {notifications.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-400">
-          <Bell className="w-10 h-10 mx-auto mb-2 text-slate-300" />
-          <p className="text-xs font-semibold">No notifications right now.</p>
+        <div className="panel-card rounded-card p-12 text-center text-ink-tertiary">
+          <Bell className="w-10 h-10 mx-auto mb-2 text-ink-tertiary/60" />
+          <p className="text-xs font-medium">No notifications right now.</p>
         </div>
       ) : (
         notifications.map((notif) => (
           <div
             key={notif.id}
-            className={`p-5 rounded-2xl border transition-all flex items-start justify-between gap-4 ${
+            className={`p-5 rounded-card border transition-all flex items-start justify-between gap-4 ${
               notif.isRead
-                ? 'bg-white border-slate-200 text-slate-600'
-                : 'bg-indigo-50/40 border-indigo-200 text-slate-900 shadow-sm'
+                ? 'bg-surface border-border-subtle text-ink-muted'
+                : 'bg-accent-soft/20 border-accent/30 text-ink'
             }`}
           >
             <div className="flex items-start space-x-3.5">
               <div
-                className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
+                className={`w-9 h-9 rounded-control flex items-center justify-center shrink-0 mt-0.5 ${
                   notif.category === 'interview'
-                    ? 'bg-amber-100 text-amber-700'
+                    ? 'bg-state-warning-soft text-state-warning'
                     : notif.category === 'job'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'bg-indigo-100 text-indigo-700'
+                    ? 'bg-accent-soft text-accent'
+                    : 'bg-page text-ink-secondary border border-border-subtle'
                 }`}
               >
                 {notif.category === 'interview' ? (
@@ -59,23 +59,23 @@ export default function NotificationsClient({
 
               <div>
                 <div className="flex items-center space-x-2">
-                  <h4 className="text-sm font-bold">{notif.title}</h4>
+                  <h4 className="text-sm font-semibold text-ink">{notif.title}</h4>
                   {!notif.isRead && (
-                    <span className="w-2 h-2 rounded-full bg-indigo-600 shrink-0"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                   )}
                 </div>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                <p className="text-xs text-ink-muted mt-1 leading-relaxed">
                   {notif.message}
                 </p>
-                <div className="flex items-center space-x-3 text-[11px] text-slate-400 mt-2">
+                <div className="flex items-center space-x-3 text-[11px] text-ink-tertiary mt-2">
                   <Clock className="w-3 h-3" />
-                  <span>{new Date(notif.createdAt).toLocaleString()}</span>
+                  <span className="tabular-nums">{new Date(notif.createdAt).toLocaleString()}</span>
                   {notif.link && (
                     <>
                       <span>•</span>
                       <Link
                         href={notif.link}
-                        className="font-semibold text-indigo-600 hover:text-indigo-800 flex items-center"
+                        className="font-medium text-accent hover:text-accent-hover flex items-center"
                       >
                         <span>View Details</span>
                         <ArrowRight className="w-3 h-3 ml-0.5" />
@@ -90,7 +90,7 @@ export default function NotificationsClient({
               <button
                 onClick={() => handleMarkRead(notif.id)}
                 disabled={isPending}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 hover:bg-slate-100 text-xs shrink-0"
+                className="p-1.5 rounded-control text-ink-tertiary hover:text-accent hover:bg-page text-xs shrink-0 transition-colors"
                 title="Mark as read"
               >
                 <Check className="w-4 h-4" />
@@ -102,4 +102,3 @@ export default function NotificationsClient({
     </div>
   );
 }
-
